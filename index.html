@@ -36,13 +36,22 @@
       color: #fff;
     }
     .brand {
-      font-weight: 700;
-      font-size: 20px;
-      letter-spacing: -.4px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
       color: #fff;
+      max-width: 100%;
     }
-    .brand span { background: #fff; color: #0759a5; border-radius: 5px; padding: 0 5px; }
+    /* Troque assets/logo.png pela sua imagem de logotipo.
+       Ajuste height para deixar a logo maior ou menor. */
+    .brand-logo {
+      display: block;
+      width: auto;
+      height: 34px;
+      max-width: min(260px, 80vw);
+      object-fit: contain;
+    }
     .guidebar {
       padding: 5px 12px;
       text-align: center;
@@ -131,7 +140,9 @@
   <header>
     <!-- Edite o nome e as cores da marca nas variáveis CSS acima. -->
     <div class="topbar">
-      <a class="brand" href="#" aria-label="Página inicial">Portal <span>EX</span> NOTÍCIAS</a>
+      <a class="brand" href="#" aria-label="Página inicial">
+        <img class="brand-logo" src="assets/logo.png" alt="Logo do portal">
+      </a>
     </div>
     <div class="guidebar">Guia de compras • Inovações e bem-estar</div>
   </header>
